@@ -16,7 +16,7 @@ $(function () {
 
 
 
-  /*=================================================
+   /*=================================================
   top-mainvisual スライダー
   ===================================================*/
   
@@ -28,12 +28,14 @@ $(function () {
     infinite: true, // 無限スライド
     arrows: false, // 矢印
     dots: false,
+    fade: true,
+  speed: 1000,
+  cssEase: "ease-in-out",
     // インジケーター
     responsive: [
       {
         breakpoint: 1000,
         settings: {
-          centerPadding: "50px",
           slidesToShow: 1,
         },
       },
