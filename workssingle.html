@@ -22,22 +22,29 @@
 <body>
     <header>
         <div class="header-logo">
-            <a href="index.html"><img src="img/ヘッダーロゴ.svg" alt=""></a>
+            <a href="index.html">
+                <img src="img/ヘッダーロゴ.svg" alt="野村建工株式会社">
+            </a>
         </div>
 
         <nav class="nav">
+            <a href="index.html" class="drawer-logo">
+                <img src="img/ヘッダーsp.svg" alt="野村建工株式会社">
+            </a>
             <ul class="nav-menu">
                 <li><a href="about.html">私たちについて</a></li>
                 <li><a href="business.html">事業内容</a></li>
                 <li><a href="works.html">施工実績</a></li>
                 <li><a href="company.html">会社概要</a></li>
                 <li><a href="recruit.html">採用情報</a></li>
-                <a href="contact.html" class="nav-contact">
-                    <img src="img/mail.svg" class="pc">
-                    <img src="img/Vector.svg" class="sp">お問い合わせ
-                </a>
-                <li><a href="privacy.html">プライバシーポリシー</a></li>
-
+                <li class="nav-contact-item">
+                    <a href="contact.html" class="nav-contact">
+                        <img src="img/mail.svg" class="pc" alt="">
+                        <img src="img/Vector.svg" class="sp" alt="">
+                        お問い合わせ
+                    </a>
+                </li>
+                <li class="nav-privacy"><a href="privacy.html">プライバシーポリシー</a></li>
             </ul>
         </nav>
 
@@ -46,10 +53,6 @@
             <span></span>
             <span></span>
         </div>
-
-
-        <div class="mask"></div>
-
     </header>
 
     <main>
@@ -65,12 +68,13 @@
         </section>
 
         <section class="works-shingle">
+            <div class="works-meta">
+                <span class="works-category category-hoso">舗装工事</span>
 
-            <span class="works-category category-hoso">舗装工事</span>
+                <time class="works-shingle-date" datetime="2018-07-07">
 
-            <div class="works-shingle-date">
-
-                <time datetime="2018-07-07">2025/12/01</time>
+                    2025/12/01
+                </time>
             </div>
 
             <h1 class="works-shingle-title">
@@ -83,8 +87,11 @@
                 <img id="worksshingle-contents-photo" src="img/workssingle1.jpg" alt="">
             </div>
             <!-- サムネイル -->
+            <div class="works-thumb-carousel">
+                <button class="works-thumb-prev" type="button" aria-label="前の写真">
+                  ←
+                </button>
             <div class="works-grid">
-
                 <div class="thumbnail active">
                     <img src="img/workssingle6.jpg" alt="">
                 </div>
@@ -125,19 +132,25 @@
                     <img src="img/workssingle3.jpg" alt="">
                 </div>
             </div>
+            <button class="works-thumb-next" type="button" aria-label="次の写真">
+                →
+              </button>
+            </div>
 
 
-                <dl class="works-shingle-text">
-                    <dt>地域</dt>
-                    <dd>テキスト</dd>
-                    <dt>構造・規模</dt>
-                    <dd>テキスト</dd>
-                    <dt>坪数</dt>
-                    <dd>テキスト</dd>
-                    <dt>工期</dt>
-                    <dd>テキスト</dd>
-                </dl>
-            
+
+
+            <dl class="works-shingle-text">
+                <dt>地域</dt>
+                <dd>テキスト</dd>
+                <dt>構造・規模</dt>
+                <dd>テキスト</dd>
+                <dt>坪数</dt>
+                <dd>テキスト</dd>
+                <dt>工期</dt>
+                <dd>テキスト</dd>
+            </dl>
+
             <a class="btn-a works-shingle-btn" href="works.html">施工実績一覧へ戻る</a>
         </section>
 
@@ -145,27 +158,18 @@
     </main>
 
     <footer>
-        <section class="footer-contents">
+        <section class="footer-contents wrapper wrapper--lg">
             <div class="footer-info">
-                <a href="index.html"><img src="img/フッターロゴPC.svg" alt=""></a>
+                <a href="index.html"><img src="img/フッターロゴPC.svg" alt="野村建工株式会社"></a>
                 <ul class="address">
-                    <li>&#12306;332-0004
-                        &nbsp;埼玉県川口市領家2-15-13
-                    </li>
-                    <li>
-                        TEL&#65295;048-222-6116(代)
-                    </li>
-                    <li>
-                        FAX&#65295;048-224-8351
-                    </li>
-                    <li>
-                        E-mail&#65295;kanazawa.t.nomura&#64;icloud.com
-                    </li>
+                    <li>&#12306;332-0004&nbsp;埼玉県川口市領家2-15-13</li>
+                    <li>TEL&#65295;048-222-6116(代)</li>
+                    <li>FAX&#65295;048-224-8351</li>
+                    <li>E-mail&#65295;kanazawa.t.nomura&#64;icloud.com</li>
                 </ul>
             </div>
 
             <div class="footer-list">
-
                 <ul class="footer-link">
                     <li><a href="about.html">私たちについて</a></li>
                     <li><a href="business.html">事業内容</a></li>
@@ -175,12 +179,12 @@
 
                 <ul class="footer-link">
                     <li><a href="recruit.html">採用情報</a></li>
+                    <li class="footer-sp"><a href="recruit.html">社員インタビュー</a></li>
+                    <li class="footer-sp"><a href="recruit.html">外国人実習生</a></li>
                     <li><a href="contact.html">お問い合わせ</a></li>
                     <li><a href="privacy.html">プライバシーポリシー</a></li>
                 </ul>
-
             </div>
-
         </section>
 
         <p class="copy-right">&copy;2026 NOMURA KENKO CO., LTD. ALL RIGHTS RESERVED.</p>

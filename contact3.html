@@ -22,22 +22,29 @@
 <body>
     <header>
         <div class="header-logo">
-            <a href="index.html"><img src="img/ヘッダーロゴ.svg" alt=""></a>
+            <a href="index.html">
+                <img src="img/ヘッダーロゴ.svg" alt="野村建工株式会社">
+            </a>
         </div>
 
         <nav class="nav">
+            <a href="index.html" class="drawer-logo">
+                <img src="img/ヘッダーsp.svg" alt="野村建工株式会社">
+            </a>
             <ul class="nav-menu">
                 <li><a href="about.html">私たちについて</a></li>
                 <li><a href="business.html">事業内容</a></li>
                 <li><a href="works.html">施工実績</a></li>
                 <li><a href="company.html">会社概要</a></li>
                 <li><a href="recruit.html">採用情報</a></li>
-                <a href="contact.html" class="nav-contact">
-                    <img src="img/mail.svg" class="pc">
-                    <img src="img/Vector.svg" class="sp">お問い合わせ
-                </a>
-                <li><a href="privacy.html">プライバシーポリシー</a></li>
-
+                <li class="nav-contact-item">
+                    <a href="contact.html" class="nav-contact">
+                        <img src="img/mail.svg" class="pc" alt="">
+                        <img src="img/Vector.svg" class="sp" alt="">
+                        お問い合わせ
+                    </a>
+                </li>
+                <li class="nav-privacy"><a href="privacy.html">プライバシーポリシー</a></li>
             </ul>
         </nav>
 
@@ -46,12 +53,7 @@
             <span></span>
             <span></span>
         </div>
-
-
-        <div class="mask"></div>
-
     </header>
-
     <main>
 
 
@@ -70,7 +72,7 @@
             <section class="contact-layer">
                 <h2 class="contact3-section-title">
                     送信しました。<br>
-                    お問い合わせいただき、ありがとうございました。
+                    お問い合わせいただき、<span class="sp-br2"><br></span>ありがとうございました。
                 </h2>
                 <p class="contact3-subtitle">
                     3営業日以内に担当者より記載いただいたメールアドレス、もしくはお電話にてご連絡させていただきます。<br>
@@ -88,27 +90,18 @@
     </main>
 
     <footer>
-        <section class="footer-contents">
+        <section class="footer-contents wrapper wrapper--lg">
             <div class="footer-info">
-                <a href="index.html"><img src="img/フッターロゴPC.svg" alt=""></a>
+                <a href="index.html"><img src="img/フッターロゴPC.svg" alt="野村建工株式会社"></a>
                 <ul class="address">
-                    <li>&#12306;332-0004
-                        &nbsp;埼玉県川口市領家2-15-13
-                    </li>
-                    <li>
-                        TEL&#65295;048-222-6116(代)
-                    </li>
-                    <li>
-                        FAX&#65295;048-224-8351
-                    </li>
-                    <li>
-                        E-mail&#65295;kanazawa.t.nomura&#64;icloud.com
-                    </li>
+                    <li>&#12306;332-0004&nbsp;埼玉県川口市領家2-15-13</li>
+                    <li>TEL&#65295;048-222-6116(代)</li>
+                    <li>FAX&#65295;048-224-8351</li>
+                    <li>E-mail&#65295;kanazawa.t.nomura&#64;icloud.com</li>
                 </ul>
             </div>
 
             <div class="footer-list">
-
                 <ul class="footer-link">
                     <li><a href="about.html">私たちについて</a></li>
                     <li><a href="business.html">事業内容</a></li>
@@ -118,17 +111,17 @@
 
                 <ul class="footer-link">
                     <li><a href="recruit.html">採用情報</a></li>
+                    <li class="footer-sp"><a href="recruit.html">社員インタビュー</a></li>
+                    <li class="footer-sp"><a href="recruit.html">外国人実習生</a></li>
                     <li><a href="contact.html">お問い合わせ</a></li>
                     <li><a href="privacy.html">プライバシーポリシー</a></li>
                 </ul>
-
             </div>
-
         </section>
 
         <p class="copy-right">&copy;2026 NOMURA KENKO CO., LTD. ALL RIGHTS RESERVED.</p>
     </footer>
-
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
     <script src="js/main.js"></script>
