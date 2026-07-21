@@ -3298,7 +3298,6 @@ address {
 
     .next-era-inner {
         max-width: none;
-        text-align: left;
     }
 
     .next-era-inner .page-heading {
@@ -3310,9 +3309,10 @@ address {
         margin-bottom: 3rem;
         padding: 0;
         font-size: 1rem;
+        text-align: left;
     }
 
-    .next-era-photo {
+    .next-era-photo.slick-initialized{
         display: block;
     }
 
