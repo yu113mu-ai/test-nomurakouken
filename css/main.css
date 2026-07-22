@@ -149,12 +149,23 @@ nav .nav-menu li:hover::after {
 
 .page-heading::before,
 .page-heading::after {
-    display: inline-block;
     content: "";
-    width: 17rem;
+    flex: 1 1 0;
+    min-width: 2rem;
     height: 1px;
+    width: auto;
     background-color: #008000;
+    margin: 0;
     margin-inline: 1rem;
+}
+
+.page-heading-text {
+    flex: 0 0 auto;
+    white-space: nowrap;
+}
+
+.sp-br2 {
+    display: none;
 }
 
 
@@ -2081,10 +2092,16 @@ footer {
 
 .works-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 2rem;
     margin-bottom: 3rem;
 }
+
+.thumbnail img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
 
 .works-thumb-carousel {
     position: relative;
@@ -3312,7 +3329,7 @@ address {
         text-align: left;
     }
 
-    .next-era-photo.slick-initialized{
+    .next-era-photo.slick-initialized {
         display: block;
     }
 
@@ -3639,523 +3656,524 @@ address {
         margin-bottom: 0;
     }
 
-    .works-shingle-text dt:first-of-type{
+    .works-shingle-text dt:first-of-type {
         border-top: 1px solid #939393;
         padding-top: 1.25rem;
     }
 
-    .works-shingle-text dd{
+    .works-shingle-text dd {
         padding-left: 0;
     }
 
-    .works-shingle-text dd::before{
+    .works-shingle-text dd::before {
         display: none;
     }
 
-    .works-shingle-btn{
+    .works-shingle-btn {
         margin-bottom: 3rem;
     }
 
 
 
-        /* ---------- RECRUIT ---------- */
-
-        .page-mv-recruit {
-            margin-bottom: 3rem;
-            padding: 2rem 0;
-        }
-
-        .recruit-interview-title {
-            font-size: 3rem;
-        }
-
-        .recruit-interview-subtitle {
-            font-size: 1.1rem;
-        }
-
-        .recruit-interview-subtitle::after,
-        .recruit-interview-subtitle::before {
-            width: 3rem;
-        }
-
-        .recruit-interview-subtitle::before {
-            left: 6%;
-        }
-
-        .recruit-title {
-            margin-bottom: 0;
-        }
-
-        .recruit-interview-item {
-            position: relative;
-            display: block;
-            width: 100%;
-            margin: 0 0 3rem;
-            padding: 0;
-            background: #ffffff;
-        }
-
-        .recruit-interview-photo {
-            position: absolute;
-            top: -19%;
-            right: 0;
-            width: min(250px, 64.1vw);
-            height: auto;
-            aspect-ratio: 5 / 6;
-            margin: 0;
-            z-index: 1;
-        }
-
-        .recruit-interview-photo img {
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .recruit-interview-photo::after {
-            top: 20%;
-            right: auto;
-            left: -35%;
-            z-index: 0;
-            font-size: 5rem;
-            line-height: 1;
-        }
-
-        .recruit-interview-text {
-            position: relative;
-            z-index: 2;
-            box-sizing: border-box;
-            width: calc(100% - 1rem);
-            margin: 16rem 0 0 0;
-            padding: 1.25rem 1.25rem 0 0;
-            background: #ffffff;
-        }
-
-        .recruit-item-title {
-            width: 75%;
-            margin: 0 0 1.25rem;
-            font-size: 1.25rem;
-            line-height: 1.35;
-        }
-
-        .info-row {
-            display: flex;
-            gap: 0.6rem;
-            padding: 0.6rem 0 0.6rem;
-        }
-
-        .info-row:first-of-type {
-            padding-top: 0;
-        }
-
-        .info-row dt {
-            flex: 0 0 6rem;
-            gap: 0.3rem;
-        }
-
-        .info-row dd {
-            margin: 0;
-            letter-spacing: 0;
-        }
-
-        .info-block {
-            padding-block: 0.6rem;
-        }
-
-        .info-block dt {
-            margin-bottom: 0.6rem;
-            gap: 0.3rem;
-        }
-
-        .info-block dd {
-            margin: 0;
-            padding-left: 1.25rem;
-            letter-spacing: 0;
-        }
-
-
-        .recruit-image {
-            line-height: 0;
-        }
-
-        .recruit-image img {
-            width: 100%;
-            height: clamp(10rem, 40vw, 35rem);
-            object-fit: cover;
-        }
-
-
-
-        .recruit-benefit {
-            padding: 3rem 1.25rem;
-        }
-
-        .page-heading-recruit {
-            font-size: 2rem;
-            margin-bottom: 2rem;
-            display: block;
-            line-height: 1.5;
-        }
-
-        .page-heading-recruit::before,
-        .page-heading-recruit::after {
-            display: none;
-        }
-
-        .recruit-benefit-description {
-            margin-bottom: 2rem;
-            text-align: left;
-        }
-
-
-        .recruitment {
-            padding: 3rem 1.25rem;
-        }
-
-        .recruitment-inner,
-        .recruit-faq-list {
-            margin-inline: 1rem;
-        }
-
-        .recruitment-list {
-            display: block;
-            padding: 1rem;
-        }
-
-        .recruitment-list dt {
-            border-bottom: none;
-            padding-bottom: 0;
-            padding-top: 0.6rem;
-        }
-
-        .recruitment-inner {
-            padding: 2rem 1.25rem;
-        }
-
-        .recruitment-title {
-            font-size: 1.5rem;
-            margin-bottom: 0.6rem;
-        }
-
-
-        .recruitment-description {
-            margin-bottom: 0.6rem;
-            text-align: left;
-        }
-
-        .recruit-faq {
-            padding-block: 3rem;
-        }
-
-        .faq-icon {
-            width: 1.5rem;
-            width: 1.5rem;
-        }
-
-        .faq-button {
-            padding: 0.6rem;
-        }
-
-        .faq-question__label {
-            margin-right: 0.6rem;
-        }
-
-        .faq-answer {
-            padding: 0.6rem
-        }
-
-        .faq-answer__text {
-            font-size: 1rem;
-        }
-
-        .faq-label {
-            margin-right: 0.6rem;
-        }
-
-
-        .faq-item {
-            margin-bottom: 2rem;
-        }
-
-
-        /* ---------- COMPANY ---------- */
-
-        .company-contents {
-            margin-bottom: 3rem;
-        }
-
-        .en-watermark-company {
-            top: -5%;
-            right: clamp(30%, 100%, 42%);
-            z-index: 5
-        }
-
-        .greeting-flex {
-            margin-inline: 1rem;
-            flex-direction: column-reverse;
-        }
-
-        .greeting-text {
-            position: static;
-            max-width: none;
-            padding: 2rem 1.25rem;
-        }
-
-        .greeting-photo {
-            margin-bottom: 2rem;
-        }
-
-        .company-photo img {
-            /* display: block; */
-            width: 100%;
-            height: clamp(10rem, 40vw, 35rem);
-            object-fit: cover;
-        }
-
-        .company-photo.slick-initialized {
-            display: block;
-        }
-
-        .company-info {
-            padding: 3rem 1.25rem;
-            margin-bottom: 3rem;
-        }
-
-        .company-info-item {
-            display: block;
-        }
-
-        .company-info-item dt {
-            border-bottom: none;
-            padding-left: 0;
-            padding-bottom: 0;
-            margin-bottom: 0.6rem;
-        }
-
-        .map-flex {
-            display: block;
-        }
-
-        .map-flex>*+* {
-            margin-top: 2rem;
-        }
-
-        iframe {
-            width: 350px;
-            height: 200px;
-        }
-
-        .map-text-title {
-            font-size: 2rem;
-            margin-bottom: 1.25rem;
-        }
-
-        .map-text {
-            padding-inline: 0;
-        }
-
-        .map-address {
-            margin-bottom: 3rem;
-        }
-
-        /* ---------- contact ---------- */
-
-        .page-mv-company {
-            margin-bottom: 3rem;
-            padding: 2rem 0;
-        }
-
-        .greeting-title {
-            font-size: 2rem;
-            margin-bottom: 1.25rem;
-        }
-
-        .greeting-subtitle {
-            font-size: 1.25rem;
-            margin-bottom: 1.25rem;
-        }
-
-        .postcode-row,
-        .address-row {
-            flex-wrap: wrap;
-        }
-
-        .postcode-input {
-            width: 100%;
-        }
-
-        .page-mv-contact {
-            margin-bottom: 3rem;
-            padding: 2rem 0;
-        }
-
-
-        .contact-section-title {
-            font-size: 1.6rem;
-        }
-
-        .contact-text span {
-            font-size: 1.6rem;
-        }
-
-        .tel-link {
-            pointer-events: none;
-            cursor: default;
-            font-size: 2.3rem;
-            line-height: 1;
-        }
-
-        .check-form,
-        .message {
-            display: block;
-        }
-
-        .form-box {
-            display: block;
-        }
-
-        .form-unit-head {
-            padding: 1.25rem;
-        }
-
-        .form-unit-contents {
-            padding: 0 2rem 1.25rem 1.25rem;
-            border-top: none;
-            flex-direction: column;
-            gap: 0.6rem;
-            align-items: start;
-
-        }
-
-        .form-unit-head::after {
-            display: none;
-        }
-
-        .postcode-row,
-        .address-row {
-            flex-wrap: nowrap;
-        }
-
-        .wp-form {
-            margin-bottom: 3rem;
-        }
-
-        .contact3-subtitle {
-            margin-bottom: 3rem;
-        }
-
-        .contact-layer {
-            margin-bottom: 3rem;
-        }
-
-        /* ---------- privacy ---------- */
-
-        .privacy-layer {
-            padding-block: 3rem;
-        }
-
-        .privacy-title {
-            font-size: 3rem;
-        }
-
-        .privacy-subtitle {
-            font-size: 1.1rem;
-        }
-
-        .privacy-subtitle::before,
-        .privacy-subtitle::after {
-            width: 3rem;
-        }
-
-        .privacy-subtitle::before {
-            left: 6%;
-        }
-
-        .privacy-section-title {
-            margin-bottom: 3rem;
-        }
+    /* ---------- RECRUIT ---------- */
+
+    .page-mv-recruit {
+        margin-bottom: 3rem;
+        padding: 2rem 0;
+    }
+
+    .recruit-interview-title {
+        font-size: 3rem;
+    }
+
+    .recruit-interview-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .recruit-interview-subtitle::after,
+    .recruit-interview-subtitle::before {
+        width: 3rem;
+    }
+
+    .recruit-interview-subtitle::before {
+        left: 6%;
+    }
+
+    .recruit-title {
+        margin-bottom: 0;
+    }
+
+    .recruit-interview-item {
+        position: relative;
+        display: block;
+        width: 100%;
+        margin: 0 0 3rem;
+        padding: 0;
+        background: #ffffff;
+    }
+
+    .recruit-interview-photo {
+        position: absolute;
+        top: -19%;
+        right: 0;
+        width: min(250px, 64.1vw);
+        height: auto;
+        aspect-ratio: 5 / 6;
+        margin: 0;
+        z-index: 1;
+    }
+
+    .recruit-interview-photo img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .recruit-interview-photo::after {
+        top: 20%;
+        right: auto;
+        left: -35%;
+        z-index: 0;
+        font-size: 5rem;
+        line-height: 1;
+    }
+
+    .recruit-interview-text {
+        position: relative;
+        z-index: 2;
+        box-sizing: border-box;
+        width: calc(100% - 1rem);
+        margin: 16rem 0 0 0;
+        padding: 1.25rem 1.25rem 0 0;
+        background: #ffffff;
+    }
+
+    .recruit-item-title {
+        width: 75%;
+        margin: 0 0 1.25rem;
+        font-size: 1.25rem;
+        line-height: 1.35;
+    }
+
+    .info-row {
+        display: flex;
+        gap: 0.6rem;
+        padding: 0.6rem 0 0.6rem;
+    }
+
+    .info-row:first-of-type {
+        padding-top: 0;
+    }
+
+    .info-row dt {
+        flex: 0 0 6rem;
+        gap: 0.3rem;
+    }
+
+    .info-row dd {
+        margin: 0;
+        letter-spacing: 0;
+    }
+
+    .info-block {
+        padding-block: 0.6rem;
+    }
+
+    .info-block dt {
+        margin-bottom: 0.6rem;
+        gap: 0.3rem;
+    }
+
+    .info-block dd {
+        margin: 0;
+        padding-left: 1.25rem;
+        letter-spacing: 0;
+    }
+
+
+    .recruit-image {
+        line-height: 0;
+    }
+
+    .recruit-image img {
+        width: 100%;
+        height: clamp(10rem, 40vw, 35rem);
+        object-fit: cover;
     }
 
 
 
-    @media (max-width: 334px) {
-        .nav .nav-menu .nav-contact-item {
-            width: 100%;
-        }
+    .recruit-benefit {
+        padding: 3rem 1.25rem;
+    }
+
+    .page-heading-recruit {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        display: block;
+        line-height: 1.5;
+    }
+
+    .page-heading-recruit::before,
+    .page-heading-recruit::after {
+        display: none;
+    }
+
+    .recruit-benefit-description {
+        margin-bottom: 2rem;
+        text-align: left;
+    }
+
+
+    .recruitment {
+        padding: 3rem 1.25rem;
+    }
+
+    .recruitment-inner,
+    .recruit-faq-list {
+        margin-inline: 1rem;
+    }
+
+    .recruitment-list {
+        display: block;
+        padding: 1rem;
+    }
+
+    .recruitment-list dt {
+        border-bottom: none;
+        padding-bottom: 0;
+        padding-top: 0.6rem;
+    }
+
+    .recruitment-inner {
+        padding: 2rem 1.25rem;
+    }
+
+    .recruitment-title {
+        font-size: 1.5rem;
+        margin-bottom: 0.6rem;
+    }
+
+
+    .recruitment-description {
+        margin-bottom: 0.6rem;
+        text-align: left;
+    }
+
+    .recruit-faq {
+        padding-block: 3rem;
+    }
+
+    .faq-icon {
+        width: 1.5rem;
+        width: 1.5rem;
+    }
+
+    .faq-button {
+        padding: 0.6rem;
+    }
+
+    .faq-question__label {
+        margin-right: 0.6rem;
+    }
+
+    .faq-answer {
+        padding: 0.6rem
+    }
+
+    .faq-answer__text {
+        font-size: 1rem;
+    }
+
+    .faq-label {
+        margin-right: 0.6rem;
+    }
+
+
+    .faq-item {
+        margin-bottom: 2rem;
+    }
+
+
+    /* ---------- COMPANY ---------- */
+
+    .company-contents {
+        margin-bottom: 3rem;
+    }
+
+    .en-watermark-company {
+        top: -5%;
+        right: clamp(30%, 100%, 42%);
+        z-index: 5
+    }
+
+    .greeting-flex {
+        margin-inline: 1rem;
+        flex-direction: column-reverse;
+    }
+
+    .greeting-text {
+        position: static;
+        max-width: none;
+        padding: 2rem 1.25rem;
+    }
+
+    .greeting-photo {
+        margin-bottom: 2rem;
+    }
+
+    .company-photo img {
+        /* display: block; */
+        width: 100%;
+        height: clamp(10rem, 40vw, 35rem);
+        object-fit: cover;
+    }
+
+    .company-photo.slick-initialized {
+        display: block;
+        line-height: 0;
+    }
+
+    .company-info {
+        padding: 3rem 1.25rem;
+        margin-bottom: 3rem;
+    }
+
+    .company-info-item {
+        display: block;
+    }
+
+    .company-info-item dt {
+        border-bottom: none;
+        padding-left: 0;
+        padding-bottom: 0;
+        margin-bottom: 0.6rem;
+    }
+
+    .map-flex {
+        display: block;
+    }
+
+    .map-flex>*+* {
+        margin-top: 2rem;
+    }
+
+    iframe {
+        width: 350px;
+        height: 200px;
+    }
+
+    .map-text-title {
+        font-size: 2rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .map-text {
+        padding-inline: 0;
+    }
+
+    .map-address {
+        margin-bottom: 3rem;
+    }
+
+    /* ---------- contact ---------- */
+
+    .page-mv-company {
+        margin-bottom: 3rem;
+        padding: 2rem 0;
+    }
+
+    .greeting-title {
+        font-size: 2rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .greeting-subtitle {
+        font-size: 1.25rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .postcode-row,
+    .address-row {
+        flex-wrap: wrap;
+    }
+
+    .postcode-input {
+        width: 100%;
+    }
+
+    .page-mv-contact {
+        margin-bottom: 3rem;
+        padding: 2rem 0;
+    }
+
+
+    .contact-section-title {
+        font-size: 1.6rem;
+    }
+
+    .contact-text span {
+        font-size: 1.6rem;
+    }
+
+    .tel-link {
+        pointer-events: none;
+        cursor: default;
+        font-size: 2.3rem;
+        line-height: 1;
+    }
+
+    .check-form,
+    .message {
+        display: block;
+    }
+
+    .form-box {
+        display: block;
+    }
+
+    .form-unit-head {
+        padding: 1.25rem;
+    }
+
+    .form-unit-contents {
+        padding: 0 2rem 1.25rem 1.25rem;
+        border-top: none;
+        flex-direction: column;
+        gap: 0.6rem;
+        align-items: start;
 
     }
 
-    /* 481〜768px：タブレット専用 */
-    @media (min-width: 481px) and (max-width: 768px) {
-        .recruit-interview-item {
-            display: grid;
-            grid-template-columns: minmax(0, 1.1fr) minmax(13rem, 0.9fr);
-            gap: 2rem;
-            align-items: start;
-            width: calc(100% - 3rem);
-            margin: 0 auto 5rem;
-            padding: 2rem 0 0;
-            background: transparent;
-        }
-
-        .recruit-interview-text {
-            grid-column: 1;
-            grid-row: 1;
-
-            position: relative;
-            z-index: auto;
-            width: auto;
-            margin: 0;
-            padding: 0;
-            background: transparent;
-        }
-
-        .recruit-interview-photo {
-            grid-column: 2;
-            grid-row: 1;
-
-            position: relative;
-            top: auto;
-            right: auto;
-            width: 100%;
-            max-width: none;
-            height: auto;
-            aspect-ratio: 4 / 5;
-            margin: 0;
-        }
-
-        .recruit-interview-photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* タブレットでは番号を隠す案 */
-        .recruit-interview-photo::after {
-            display: block;
-            top: auto;
-            right: auto;
-            bottom: -2.5rem;
-            left: -4rem;
-            z-index: 2;
-            font-size: clamp(5rem, 12vw, 8rem);
-            line-height: 1;
-        }
-
-        .recruit-item-title {
-            width: auto;
-            margin: 0 0 1.5rem;
-            font-size: clamp(1.5rem, 3vw, 2rem);
-            line-height: 1.35;
-        }
-
-        .info-row,
-        .info-block {
-            font-size: 0.875rem;
-        }
-
-        .info-block dd {
-            font-size: 0.8125rem;
-        }
+    .form-unit-head::after {
+        display: none;
     }
+
+    .postcode-row,
+    .address-row {
+        flex-wrap: nowrap;
+    }
+
+    .wp-form {
+        margin-bottom: 3rem;
+    }
+
+    .contact3-subtitle {
+        margin-bottom: 3rem;
+    }
+
+    .contact-layer {
+        margin-bottom: 3rem;
+    }
+
+    /* ---------- privacy ---------- */
+
+    .privacy-layer {
+        padding-block: 3rem;
+    }
+
+    .privacy-title {
+        font-size: 3rem;
+    }
+
+    .privacy-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .privacy-subtitle::before,
+    .privacy-subtitle::after {
+        width: 3rem;
+    }
+
+    .privacy-subtitle::before {
+        left: 6%;
+    }
+
+    .privacy-section-title {
+        margin-bottom: 3rem;
+    }
+}
+
+
+
+@media (max-width: 334px) {
+    .nav .nav-menu .nav-contact-item {
+        width: 100%;
+    }
+
+}
+
+/* 481〜768px：タブレット専用 */
+@media (min-width: 481px) and (max-width: 768px) {
+    .recruit-interview-item {
+        display: grid;
+        grid-template-columns: minmax(0, 1.1fr) minmax(13rem, 0.9fr);
+        gap: 2rem;
+        align-items: start;
+        width: calc(100% - 3rem);
+        margin: 0 auto 5rem;
+        padding: 2rem 0 0;
+        background: transparent;
+    }
+
+    .recruit-interview-text {
+        grid-column: 1;
+        grid-row: 1;
+
+        position: relative;
+        z-index: auto;
+        width: auto;
+        margin: 0;
+        padding: 0;
+        background: transparent;
+    }
+
+    .recruit-interview-photo {
+        grid-column: 2;
+        grid-row: 1;
+
+        position: relative;
+        top: auto;
+        right: auto;
+        width: 100%;
+        max-width: none;
+        height: auto;
+        aspect-ratio: 4 / 5;
+        margin: 0;
+    }
+
+    .recruit-interview-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* タブレットでは番号を隠す案 */
+    .recruit-interview-photo::after {
+        display: block;
+        top: auto;
+        right: auto;
+        bottom: -2.5rem;
+        left: -4rem;
+        z-index: 2;
+        font-size: clamp(5rem, 12vw, 8rem);
+        line-height: 1;
+    }
+
+    .recruit-item-title {
+        width: auto;
+        margin: 0 0 1.5rem;
+        font-size: clamp(1.5rem, 3vw, 2rem);
+        line-height: 1.35;
+    }
+
+    .info-row,
+    .info-block {
+        font-size: 0.875rem;
+    }
+
+    .info-block dd {
+        font-size: 0.8125rem;
+    }
+}
